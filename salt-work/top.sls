@@ -1,9 +1,5 @@
 base:
-	'*':
-		- nginx
-	'db.test.com':
-		- mysql
-	'zabbix.test.com':
-		- zabbix
-	'php.test.com':
-		- php
+	'web.test.com':
+		- nginx.script
+		- nginx.server
+	
