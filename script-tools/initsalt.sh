@@ -19,7 +19,12 @@ yum-salt(){
 	cd /opt
 	wget -c http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 	rpm -ivh epel-release-6-8.noarch.rpm
-	yum -y install salt-master salt-minion
+	read -p "Enter number:(1:master,2:minion)"  number
+	if [ $number -eq 1 ];then
+		yum -y install salt-master
+	else
+		yum -y install salt-minion
+	fi
 }
 
 yum-salt
